@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function YearTable(props) {
     console.log('YearTable', props);
@@ -66,23 +66,30 @@ function MonthTable(props) {
     );
 };
 
+async function fetchData() {
+    const url = 'https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hoc/aggregation/data/data.json'
+    const response = await fetch(url)
+    return response.json()
+}
 // TODO:
 // 1. Загрузите данные с помощью fetch: https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hoc/aggregation/data/data.json
 // 2. Не забудьте вынести URL в переменные окружения (не хардкодьте их здесь)
 // 3. Положите их в state
-export default class App extends React.Component {
-    state = {
-        list: []
-    };
+export default function App() {
+    const [list, setList] = useState({});
 
-    render() {
-        const {list} = this.state;
-        return (
-            <div id="app">
-                <MonthTable list={list} />
-                <YearTable list={list} />
-                <SortTable list={list} />
-            </div>
-        );
-    }
+    useEffect(async () => {
+        const data = await fetchData()
+        setList(data)
+        console.log(data);
+        console.log(list);
+    }, []);
+
+    return (
+        <div id="app">
+            <MonthTable list={list} />
+            <YearTable list={list} />
+            <SortTable list={list} />
+        </div>
+    );
 }
