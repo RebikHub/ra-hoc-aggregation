@@ -1,5 +1,5 @@
-export default function groupToYear(list) {
-  list.sort((a,b) => (new Date(b.amount).getTime()) - (new Date(a.amount).getTime()))
+export default function groupToYear(data) {
+  const list = data.sort((a,b) => (b.amount - a.amount))
       .map((el) => {
         return {
           year: new Date(el.date).getFullYear(),
