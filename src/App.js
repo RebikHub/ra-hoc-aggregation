@@ -11,6 +11,7 @@ import withData from './HOC/withData';
 // 1. Загрузите данные с помощью fetch: https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hoc/aggregation/data/data.json
 // 2. Не забудьте вынести URL в переменные окружения (не хардкодьте их здесь)
 // 3. Положите их в state
+
 export default function App() {
     const [list, setList] = useState([]);
     const url = 'https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hoc/aggregation/data/data.json'

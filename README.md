@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/3ckd5wffodc2sspj/branch/master?svg=true)](https://ci.appveyor.com/project/RebikHub/ra-hoc-aggregation/branch/master)
 
 [Агрегация данных для таблиц](https://rebikhub.github.io/ra-hoc-aggregation/)
 
