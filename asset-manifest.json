@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ra-hoc-aggregation/static/css/main.c2cc74e6.css",
+    "main.js": "/ra-hoc-aggregation/static/js/main.3df775b5.js",
+    "index.html": "/ra-hoc-aggregation/index.html",
+    "main.c2cc74e6.css.map": "/ra-hoc-aggregation/static/css/main.c2cc74e6.css.map",
+    "main.3df775b5.js.map": "/ra-hoc-aggregation/static/js/main.3df775b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2cc74e6.css",
+    "static/js/main.3df775b5.js"
+  ]
+}
